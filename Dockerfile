@@ -1,7 +1,5 @@
 FROM debian:stretch
 
-MAINTAINER Elie Charra <elie.charra [at] kibatic.com>
-
 # https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV PERFORMANCE_OPTIM false
