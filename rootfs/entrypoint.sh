@@ -20,4 +20,6 @@ then
   echo > /etc/php/7.4/fpm/conf.d/99-symfony.ini
 fi
 
+composer update
+
 exec /usr/bin/supervisord -n
