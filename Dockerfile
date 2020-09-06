@@ -39,7 +39,8 @@ RUN apt-get -qq update > /dev/null && DEBIAN_FRONTEND=noninteractive apt-get -qq
     wget https://get.symfony.com/cli/installer -O - | bash &&\
     mv /root/.symfony/bin/symfony /usr/local/bin/symfony &&\
     wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash &&\
-    /bin/bash -c "source ~/.profile && nvm install node"
+    /bin/bash -c "source ~/.profile && nvm install node" &&\
+    npm install -g yarn
 
 COPY rootfs /
 
