@@ -37,7 +37,9 @@ RUN apt-get -qq update > /dev/null && DEBIAN_FRONTEND=noninteractive apt-get -qq
     echo "daemon off;" >> /etc/nginx/nginx.conf &&\
     mkdir -p /run/php &&\
     wget https://get.symfony.com/cli/installer -O - | bash &&\
-    mv /root/.symfony/bin/symfony /usr/local/bin/symfony
+    mv /root/.symfony/bin/symfony /usr/local/bin/symfony &&\
+    wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash &&\
+    /bin/bash -c "source ~/.profile && nvm install node"
 
 COPY rootfs /
 
